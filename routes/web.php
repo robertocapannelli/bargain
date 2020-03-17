@@ -21,4 +21,6 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/w/create', 'WatchesController@create');
+
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
