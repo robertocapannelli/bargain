@@ -15,9 +15,11 @@ class CreateWatchesTable extends Migration {
             $table->id();
             $table->string( 'brand' );
             $table->string( 'name' );
-            $table->string('reference');
-            $table->year( 'year' );
-            $table->boolean( 'warranty' );
+            $table->string( 'reference' );
+            $table->year( 'year' )
+                ->nullable();
+            $table->boolean( 'warranty' )
+                ->default(false);
             $table->string( 'featured_image' );
             $table->timestamps();
 

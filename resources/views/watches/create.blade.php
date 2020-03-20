@@ -2,11 +2,10 @@
 
 @section('content')
     <div class="container">
-        <form action="">
-
+        <form action="/w" enctype="multipart/form-data" method="post">
+            @csrf
             <div class="row">
                 <div class="col-8 offset-2">
-
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label">{{ __('Name') }}</label>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
@@ -52,7 +51,6 @@
                         @enderror
                     </div>
 
-
                     <div class="form-group row">
                         <label for="year" class="col-md-4 col-form-label">{{__('Year')}}</label>
                         <input id="year" type="number" class="form-control @error('year') is-invalid @enderror"
@@ -68,7 +66,10 @@
                         @enderror
                     </div>
 
-                    <div class="form-group row">
+                    {{--<div class="form-group row">
+
+                        <label for="warranty" class="col-md-4 col-form-label">{{__('Warranty')}}</label>
+
                         <div class="form-check">
                             <label for="warranty" class="form-check-label">{{__('Yes')}}</label>
                             <input class="form-check-input" type="radio" name="warranty" id="warranty" value="yes">
@@ -78,7 +79,7 @@
                             <label for="warranty" class="form-check-label">{{__('No')}}</label>
                             <input class="form-check-input" type="radio" name="warranty" id="warranty" value="no">
                         </div>
-                    </div>
+                    </div>--}}
 
                     <div class="form-group row">
                         <label for="featured_image" class="col-md-4 col-form-label">{{__('Featured Image')}}</label>
@@ -94,7 +95,9 @@
                         @enderror
                     </div>
 
-
+                    <div class="row py-4">
+                        <button class="btn-primary btn">{{__('Add new watch')}}</button>
+                    </div>
                 </div>
             </div>
         </form>

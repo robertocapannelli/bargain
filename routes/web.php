@@ -13,14 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get( '/', function () {
+    return view( 'welcome' );
+} );
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/w/create', 'WatchesController@create');
+//Profiles routes
+Route::get( '/profile/{user}', 'ProfilesController@index' )
+    ->name( 'profile.show' );
 
-Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+//Watches routes
+Route::get( '/w', 'WatchesController@index' );
+Route::get( '/w/create', 'WatchesController@create' );
+Route::post( '/w', 'WatchesController@store' );
+Route::get( '/w/{watch}', 'WatchesController@show' );
+Route::put( '/w/{watch}', 'WatchController@edit' );
+Route::delete( '/w/{watch}', 'WatchesController@destroy' );
+
+
