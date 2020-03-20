@@ -19,18 +19,22 @@ Route::get( '/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get( '/home', 'HomeController@index' )
+    ->name( 'home' );
 
 //Profiles routes
 Route::get( '/profile/{user}', 'ProfilesController@index' )
     ->name( 'profile.show' );
 
 //Watches routes
-Route::get( '/w', 'WatchesController@index' );
-Route::get( '/w/create', 'WatchesController@create' );
-Route::post( '/w', 'WatchesController@store' );
-Route::get( '/w/{watch}', 'WatchesController@show' );
-Route::put( '/w/{watch}', 'WatchController@edit' );
-Route::delete( '/w/{watch}', 'WatchesController@destroy' );
+Route::get( '/watches', 'WatchesController@index' );
+Route::post( '/watches', 'WatchesController@store' );
+Route::get( '/watches/create', 'WatchesController@create' );
+Route::get( '/watches/{watch}', 'WatchesController@show' );
+
+Route::get( '/watches/{watch}/edit', 'WatchesController@edit' );
+Route::put( '/watches/{watch}', 'WatchesController@update' );
+
+Route::delete( '/watches/{watch}', 'WatchesController@destroy' );
 
 

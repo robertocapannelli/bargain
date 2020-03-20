@@ -5,41 +5,28 @@ namespace App\Http\Controllers;
 use App\Watch;
 use Illuminate\Http\Request;
 
-class WatchesController extends Controller
-{
+
+class WatchesController extends Controller {
 
     public function __construct() {
         $this->middleware( 'auth' );
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    public function index() {
+
+        $watches = Watch::latest()
+            ->get();
+
+        return view( 'watches.index', [
+            'watches' => $watches
+        ] );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function create()
-    {
+    public function create() {
         return view( 'watches.create' );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+    public function store( Request $request ) {
         $data = $request->validate( [
             'name'           => 'required',
             'brand'          => 'required',
@@ -57,50 +44,44 @@ class WatchesController extends Controller
         ] );
 
         Watch::create( $data );
+
+        return redirect( '/watches' );
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function show($id)
-    {
-        return view('watches.show');
+    public function show( $id ) {
+
+        $watch = Watch::find( $id );
+
+        return view( 'watches.show', [
+            'watch' => $watch
+        ] );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function edit( $id ) {
+
+        $watch = Watch::find( $id );
+
+        return view( 'watches.edit', [
+            'watch' => $watch
+        ] );
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update( $id ) {
+
+        $watch = Watch::find( $id );
+
+        $watch->name = request( 'name' );
+        $watch->brand = request( 'brand' );
+        $watch->reference = request( 'reference' );
+        $watch->year = request( 'year' );
+        $watch->featured_image = request( 'featured_image' );
+
+        $watch->save();
+
+        return redirect( '/watches/', $watch->id );
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
+    public function destroy( $id ) {
         //
     }
 }
