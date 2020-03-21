@@ -20,7 +20,7 @@ class CreateWatchesTable extends Migration {
                 ->nullable();
             $table->boolean( 'warranty' )
                 ->default(false);
-            $table->string( 'featured_image' );
+            $table->string( 'featured_image' )->nullable();
             $table->timestamps();
 
             //TODO we should think about the relationship between watch and profiles
