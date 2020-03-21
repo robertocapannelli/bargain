@@ -13,28 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get( '/', function () {
+Route::get( '/', function() {
     return view( 'welcome' );
 } );
 
 Auth::routes();
 
-Route::get( '/home', 'HomeController@index' )
-    ->name( 'home' );
+Route::get( '/home', 'HomeController@index' )->name( 'home' );
 
 //Profiles routes
-Route::get( '/profile/{user}', 'ProfilesController@index' )
-    ->name( 'profile.show' );
+Route::get( '/profile/{user}', 'ProfilesController@index' )->name( 'profile.show' );
 
 //Watches routes
-Route::get( '/watches', 'WatchesController@index' );
+Route::get( '/watches', 'WatchesController@index' )->name( 'watches.index' );
 Route::post( '/watches', 'WatchesController@store' );
-Route::get( '/watches/create', 'WatchesController@create' );
-Route::get( '/watches/{watch}', 'WatchesController@show' );
-
-Route::get( '/watches/{watch}/edit', 'WatchesController@edit' );
+Route::get( '/watches/create', 'WatchesController@create' )->name( 'watches.create' );
+Route::get( '/watches/{watch}', 'WatchesController@show' )->name( 'watches.show' );
+Route::get( '/watches/{watch}/edit', 'WatchesController@edit' )->name( 'watches.edit' );
 Route::put( '/watches/{watch}', 'WatchesController@update' );
-
 Route::delete( '/watches/{watch}', 'WatchesController@destroy' );
 
 

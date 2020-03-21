@@ -14,11 +14,8 @@ class WatchesController extends Controller {
 
     public function index() {
 
-        $watches = Watch::latest()
-            ->get();
-
         return view( 'watches.index', [
-            'watches' => $watches
+            'watches' => Watch::latest()->get()
         ] );
     }
 
@@ -26,8 +23,39 @@ class WatchesController extends Controller {
         return view( 'watches.create' );
     }
 
-    public function store( Request $request ) {
-        $data = $request->validate( [
+    public function store() {
+        Watch::create( $this->validateWatch() );
+
+        return redirect( route( 'watches.index' ) );
+    }
+
+    public function show( Watch $watch ) {
+        return view( 'watches.show', [
+            'watch' => $watch
+        ] );
+    }
+
+    public function edit( Watch $watch ) {
+        return view( 'watches.edit', [
+            'watch' => $watch
+        ] );
+    }
+
+    public function update( Watch $watch ) {
+        $watch->update( $this->validateWatch() );
+
+        return redirect( $watch->path() );
+    }
+
+    public function destroy( $id ) {
+        //
+    }
+
+    /**
+     * @return array
+     */
+    protected function validateWatch() : array {
+        return request()->validate( [
             'name'           => 'required',
             'brand'          => 'required',
             'reference'      => 'required',
@@ -38,50 +66,8 @@ class WatchesController extends Controller {
             ],
             //'warranty'       => 'required',
             'featured_image' => [
-                'required',
                 'image'
             ]
         ] );
-
-        Watch::create( $data );
-
-        return redirect( '/watches' );
-    }
-
-    public function show( $id ) {
-
-        $watch = Watch::find( $id );
-
-        return view( 'watches.show', [
-            'watch' => $watch
-        ] );
-    }
-
-    public function edit( $id ) {
-
-        $watch = Watch::find( $id );
-
-        return view( 'watches.edit', [
-            'watch' => $watch
-        ] );
-    }
-
-    public function update( $id ) {
-
-        $watch = Watch::find( $id );
-
-        $watch->name = request( 'name' );
-        $watch->brand = request( 'brand' );
-        $watch->reference = request( 'reference' );
-        $watch->year = request( 'year' );
-        $watch->featured_image = request( 'featured_image' );
-
-        $watch->save();
-
-        return redirect( '/watches/', $watch->id );
-    }
-
-    public function destroy( $id ) {
-        //
     }
 }
