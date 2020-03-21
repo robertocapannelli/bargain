@@ -13,14 +13,14 @@
                     <div class="card-body">
                         <ul>
                             <li>
-                                <a href="/profile/{{$user->id}}">Profile</a>
+                                <a href="{{route('profile.show', $user)}}">Profile</a>
                             </li>
 
                             <li>
-                                <a href="/watches">Watches</a>
+                                <a href="{{route('watches.index')}}">Watches</a>
                             </li>
                             <li>
-                                <a href="/watches/create">Add new watch</a>
+                                <a href="{{route('watches.create')}}">Add new watch</a>
                             </li>
                         </ul>
                     </div>

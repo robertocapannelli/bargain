@@ -19,7 +19,7 @@
                     </div>
 
                     <footer>
-                        <a href="/watches/{{$watch->id}}/edit">Edit</a>
+                        <a href="{{route('watches.edit', $watch)}}">Edit</a>
                     </footer>
                 </article>
             @endforeach
