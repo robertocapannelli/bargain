@@ -24,6 +24,10 @@ Route::get( '/home', 'HomeController@index' )->name( 'home' );
 //Profiles routes
 Route::get( '/profile/{user}', 'ProfilesController@index' )->name( 'profile.show' );
 
+//API
+Route::get('/api/watches', 'Api\WatchesController@index');
+
+
 //Watches routes
 Route::get( '/watches', 'WatchesController@index' )->name( 'watches.index' );
 Route::post( '/watches', 'WatchesController@store' );
