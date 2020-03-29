@@ -4,14 +4,14 @@ import { Row, Col, Button, Card, CardBody, Media } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
-import avatar1 from "../../../assets/img/avatars/avatar.jpg";
-import avatar2 from "../../../assets/img/avatars/avatar-2.jpg";
-import avatar4 from "../../../assets/img/avatars/avatar-4.jpg";
-import avatar5 from "../../../assets/img/avatars/avatar-5.jpg";
+import avatar1 from "../../../../../img/avatars/avatar.jpg";
+import avatar2 from "../../../../../img/avatars/avatar-2.jpg";
+import avatar4 from "../../../../../img/avatars/avatar-4.jpg";
+import avatar5 from "../../../../../img/avatars/avatar-5.jpg";
 
-import unsplash1 from "../../../assets/img/photos/unsplash-1.jpg";
-import unsplash2 from "../../../assets/img/photos/unsplash-2.jpg";
-import unsplash3 from "../../../assets/img/photos/unsplash-3.jpg";
+import unsplash1 from "../../../../../img/photos/unsplash-1.jpg";
+import unsplash2 from "../../../../../img/photos/unsplash-2.jpg";
+import unsplash3 from "../../../../../img/photos/unsplash-3.jpg";
 
 const Activity = () => (
   <Card className="flex-fill">

@@ -3,7 +3,7 @@ import { Button, Card, CardBody, CardTitle } from "reactstrap";
 
 import { MessageSquare } from "react-feather";
 
-import avatar1 from "../../../assets/img/avatars/avatar.jpg";
+import avatar1 from "../../../../../img/avatars/avatar.jpg";
 
 const User = () => (
   <Card className="flex-fill mb-3">

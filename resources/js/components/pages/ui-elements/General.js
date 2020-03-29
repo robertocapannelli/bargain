@@ -27,7 +27,7 @@ import {
   Spinner
 } from "reactstrap";
 
-import avatar1 from "../../assets/img/avatars/avatar.jpg";
+import avatar1 from "../../../../img/avatars/avatar.jpg";
 
 const colors = [
   {

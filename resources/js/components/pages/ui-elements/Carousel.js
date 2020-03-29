@@ -10,9 +10,9 @@ import {
   UncontrolledCarousel
 } from "reactstrap";
 
-import unsplash1 from "../../assets/img/photos/unsplash-1.jpg";
-import unsplash2 from "../../assets/img/photos/unsplash-2.jpg";
-import unsplash3 from "../../assets/img/photos/unsplash-3.jpg";
+import unsplash1 from "../../../../img/photos/unsplash-1.jpg";
+import unsplash2 from "../../../../img/photos/unsplash-2.jpg";
+import unsplash3 from "../../../../img/photos/unsplash-3.jpg";
 
 const slides = [
   {

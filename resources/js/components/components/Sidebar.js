@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 import routes from "../routes/index";
-import avatar from "../assets/img/avatars/avatar.jpg";
+import avatar from "../../../img/avatars/avatar.jpg";
 
 const SidebarCategory = withRouter(
   ({

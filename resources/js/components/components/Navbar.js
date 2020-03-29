@@ -30,15 +30,15 @@ import {
   UserPlus
 } from "react-feather";
 
-import usFlag from "../assets/img/flags/us.png";
-import esFlag from "../assets/img/flags/es.png";
-import deFlag from "../assets/img/flags/de.png";
-import nlFlag from "../assets/img/flags/nl.png";
+import usFlag from "../../../img/flags/us.png";
+import esFlag from "../../../img/flags/es.png";
+import deFlag from "../../../img/flags/de.png";
+import nlFlag from "../../../img/flags/nl.png";
 
-import avatar1 from "../assets/img/avatars/avatar.jpg";
-import avatar3 from "../assets/img/avatars/avatar-3.jpg";
-import avatar4 from "../assets/img/avatars/avatar-4.jpg";
-import avatar5 from "../assets/img/avatars/avatar-5.jpg";
+import avatar1 from "../../../img/avatars/avatar.jpg";
+import avatar3 from "../../../img/avatars/avatar-3.jpg";
+import avatar4 from "../../../img/avatars/avatar-4.jpg";
+import avatar5 from "../../../img/avatars/avatar-5.jpg";
 
 const notifications = [
   {

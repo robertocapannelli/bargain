@@ -12,7 +12,7 @@ import {
   CustomInput
 } from "reactstrap";
 
-import avatar from "../../assets/img/avatars/avatar.jpg";
+import avatar from "../../../../img/avatars/avatar.jpg";
 
 const SignIn = () => (
   <React.Fragment>

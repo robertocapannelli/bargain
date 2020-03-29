@@ -14,11 +14,11 @@ import {
   Row
 } from "reactstrap";
 
-import avatar1 from "../../assets/img/avatars/avatar.jpg";
-import avatar2 from "../../assets/img/avatars/avatar-2.jpg";
-import avatar3 from "../../assets/img/avatars/avatar-3.jpg";
-import avatar4 from "../../assets/img/avatars/avatar-4.jpg";
-import avatar5 from "../../assets/img/avatars/avatar-5.jpg";
+import avatar1 from "../../../../img/avatars/avatar.jpg";
+import avatar2 from "../../../../img/avatars/avatar-2.jpg";
+import avatar3 from "../../../../img/avatars/avatar-3.jpg";
+import avatar4 from "../../../../img/avatars/avatar-4.jpg";
+import avatar5 from "../../../../img/avatars/avatar-5.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";

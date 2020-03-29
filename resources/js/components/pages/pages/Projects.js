@@ -25,13 +25,13 @@ import { MoreHorizontal } from "react-feather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-import avatar1 from "../../assets/img/avatars/avatar.jpg";
-import avatar2 from "../../assets/img/avatars/avatar-2.jpg";
-import avatar3 from "../../assets/img/avatars/avatar-3.jpg";
+import avatar1 from "../../../../img/avatars/avatar.jpg";
+import avatar2 from "../../../../img/avatars/avatar-2.jpg";
+import avatar3 from "../../../../img/avatars/avatar-3.jpg";
 
-import unsplash1 from "../../assets/img/photos/unsplash-1.jpg";
-import unsplash2 from "../../assets/img/photos/unsplash-2.jpg";
-import unsplash3 from "../../assets/img/photos/unsplash-3.jpg";
+import unsplash1 from "../../../../img/photos/unsplash-1.jpg";
+import unsplash2 from "../../../../img/photos/unsplash-2.jpg";
+import unsplash3 from "../../../../img/photos/unsplash-3.jpg";
 
 const Project = ({ name, state, color, percentage, description, image }) => (
   <Card>

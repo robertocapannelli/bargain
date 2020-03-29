@@ -1,0 +1,74 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600');
+
+// Variables
+@import "resources/sass/1-variables/app";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Theme mixins
+@import "resources/sass/2-mixins/button";
+@import "resources/sass/2-mixins/modal";
+@import "resources/sass/2-mixins/switch";
+@import "resources/sass/2-mixins/tabs";
+@import "resources/sass/2-mixins/wizard";
+
+// Theme components
+@import "resources/sass/3-components/accordion";
+@import "resources/sass/3-components/alert";
+@import "resources/sass/3-components/avatar";
+@import "resources/sass/3-components/badge";
+@import "resources/sass/3-components/buttons";
+@import "resources/sass/3-components/card";
+@import "resources/sass/3-components/chart";
+@import "resources/sass/3-components/chat";
+@import "resources/sass/3-components/dropdown";
+@import "resources/sass/3-components/feather";
+@import "resources/sass/3-components/footer";
+@import "resources/sass/3-components/forms";
+@import "resources/sass/3-components/hamburger";
+@import "resources/sass/3-components/landing";
+@import "resources/sass/3-components/modal";
+@import "resources/sass/3-components/navbar";
+@import "resources/sass/3-components/reboot";
+@import "resources/sass/3-components/progress";
+@import "resources/sass/3-components/sidebar";
+@import "resources/sass/3-components/sizing";
+@import "resources/sass/3-components/tables";
+@import "resources/sass/3-components/tabs";
+@import "resources/sass/3-components/timeline";
+@import "resources/sass/3-components/type";
+@import "resources/sass/3-components/wrapper";
+@import "resources/sass/3-components/content";
+@import "resources/sass/3-components/main";
+@import "resources/sass/3-components/settings";
+@import "resources/sass/3-components/ie";
+
+// Theme utilities
+@import "resources/sass/4-utilities/borders";
+@import "resources/sass/4-utilities/cursors";
+@import "resources/sass/4-utilities/font";
+@import "resources/sass/4-utilities/overflow";
+@import "resources/sass/4-utilities/position";
+
+// 3rd party plugins
+@import "../../node_modules/react-quill/dist/quill.bubble.css";
+@import "../../node_modules/react-quill/dist/quill.snow.css";
+@import '../../node_modules/react-redux-toastr/src/styles/index';
+@import '../../node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+@import "../../node_modules/jvectormap-next/jquery-jvectormap.css";
+@import "../../node_modules/react-dragula/dist/dragula.css";
+@import "../../node_modules/fullcalendar/dist/fullcalendar.css";
+@import "../../node_modules/smartwizard/dist/css/smart_wizard.css";
+@import "../../node_modules/smartwizard/dist/css/smart_wizard_theme_arrows.css";
+
+// 3rd party plugin styles
+@import "resources/sass/5-vendor/fullcalendar";
+@import "resources/sass/5-vendor/perfect-scrollbar";
+@import "resources/sass/5-vendor/quill";
+@import "resources/sass/5-vendor/react-bootstrap-table";
+@import "resources/sass/5-vendor/react-datetime";
+@import "resources/sass/5-vendor/react-select";
+@import "resources/sass/5-vendor/toastr";
+@import "resources/sass/5-vendor/wizard";

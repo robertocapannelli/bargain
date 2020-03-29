@@ -18,9 +18,9 @@ import {
   faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
 
-import screenshotClassic from "../assets/img/screenshots/theme-classic-small.png";
-import screenshotCorporate from "../assets/img/screenshots/theme-corporate-small.png";
-import screenshotModern from "../assets/img/screenshots/theme-modern-small.png";
+import screenshotClassic from "../../../img/screenshots/theme-classic-small.png";
+import screenshotCorporate from "../../../img/screenshots/theme-corporate-small.png";
+import screenshotModern from "../../../img/screenshots/theme-modern-small.png";
 
 class Settings extends React.Component {
   constructor() {

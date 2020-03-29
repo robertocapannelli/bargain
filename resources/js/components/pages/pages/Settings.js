@@ -25,7 +25,7 @@ import { MoreHorizontal } from "react-feather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 
-import avatar1 from "../../assets/img/avatars/avatar.jpg";
+import avatar1 from "../../../../img/avatars/avatar.jpg";
 
 const Navigation = () => (
   <Card>

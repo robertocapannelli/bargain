@@ -14,9 +14,9 @@ import {
 
 import { MoreHorizontal } from "react-feather";
 
-import avatar2 from "../../../assets/img/avatars/avatar-2.jpg";
-import avatar4 from "../../../assets/img/avatars/avatar-4.jpg";
-import avatar5 from "../../../assets/img/avatars/avatar-5.jpg";
+import avatar2 from "../../../../../img/avatars/avatar-2.jpg";
+import avatar4 from "../../../../../img/avatars/avatar-4.jpg";
+import avatar5 from "../../../../../img/avatars/avatar-5.jpg";
 
 const Following = () => (
   <Card className="flex-fill mb-3">
