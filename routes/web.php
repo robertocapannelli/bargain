@@ -17,6 +17,10 @@ Route::get( '/', function() {
     return view( 'welcome' );
 } );
 
+Route::get('/app{any?}', function () {
+    return view('layouts.app');
+})->where('any', '.*')->name('app');
+
 Auth::routes();
 
 Route::get( '/home', 'HomeController@index' )->name( 'home' );
