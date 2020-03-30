@@ -74,7 +74,9 @@ const Analytics = async(() => import("../pages/dashboards/Analytics"));
 const Ecommerce = async(() => import("../pages/dashboards/Ecommerce"));
 const Crypto = async(() => import("../pages/dashboards/Crypto"));
 const Social = async(() => import("../pages/dashboards/Social"));
-const Watches = async(() => import("../pages/dashboards/Watches"));
+
+
+const Watches = async(() => import("../pages/watches/index"));
 const Accessories = async(() => import("../pages/dashboards/Accessories"));
 const General = async(() => import("../pages/dashboards/General"));
 const Users = async(() => import("../pages/dashboards/Users"));
@@ -162,7 +164,7 @@ const watchRoutes = {
     {
       path: "/app/watches",
       name: "All watches",
-      component: Clients
+      component: Watches
     },
     {
       path: "/app/watches/create",
